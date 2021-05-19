@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="card-header">
+      Welcome!
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            Hello and welcome to my resume app! As you may already know my name is Brandon Droneburg. While looking over this site 
+            you will find that it contains an overview as well as a value offer about myself, my education history as well as skills that I possess 
+            and a brief history of my work experience within the last few years. 
+        </p>
+
+        <p class="card-text">
+            This site was built using Bootstrap, Angular and is hosted on the Amazon Web Services (AWS) free tier platform. 
+            I have utilized an EC2 instance as my virtual machine (vm) which contains the app distribution/files in addition to an Elastic IP service after installing nginx on the vm to host it out on the internet.
+            In time I hope to host projects that I have developed to showcase my skills further. Depending on the cost, I may end up recording 
+            videos to demo these projects and embeding them in their respective sections of the site.
+        </p>
+
+
+
+    </div>
+
+</div>
+<div class="card">
+    <div class="card-header">
+        Please fill out this form!
+      </div>
+    <div class="card-body">
+        <p class="card-text">
+            Thank you again for viewing my site, if possible could you please fill out this form? My goal with this form is to see what type of person is viewing my site.
+             This is mostly a way for me to see whether or not a perspective employer/ recruiter/ hiring manager has taken the time to view my resume and get a glimpse of my skills. 
+             While I could use the traditional way to capture site traffic and infer from the number of views the site has. 
+             I would like to showcase my skills further my creating a form in code, capturing anonomyous data and turning it into some sort of visualization.
+
+             
+        </p>
+        <p class="card-text">
+            For privacy and data security reasons, I have no intention of asking for your name, contact info or company information.
+             I would rather not risk potential breaches and misuse of captured data.
+        </p>
+    </div>
+
+</div>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="exForm">
+            <div class="form-group">
+                <label>Which purpose are you viewing for?</label>
+                <br />
+                <mat-radio-group formControlName="radioGroup" aria-label="Select an option">
+                <br />
+                <mat-radio-button value="friend/fam">I am a friend/ family member</mat-radio-button>
+                <br />
+                <mat-radio-button value="recruit/hireman">I am a recruiter/ hiring manager</mat-radio-button>
+                </mat-radio-group><br /><br />
+                <button mat-raised-button color="primary" [disabled]="!exForm.valid">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
